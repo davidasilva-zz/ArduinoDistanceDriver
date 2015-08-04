@@ -1,0 +1,7 @@
+*.o
+parking
+UltrasoundDistanceSensor.cpp 
+UltrasoundDistanceSensor.h 
+DistanceSensor.cpp 
+DistanceSensor.h
+/Release/
