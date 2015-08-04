@@ -1,29 +1,28 @@
-ARDUINO_LIB_PATH=/usr/share/arduino/libraries
-LIB_LIST=DistanceSensor UltrasoundDistanceSensor
-SOURCE_PATH=`pwd`
+CC = g++
+CFLAGS = -Wall  -g -std=c++0x 
+INCLUDES = -I./
+LFLAGS =
+LIBRARIES =
 
-all: 
-	@echo "Use [install], [unistall] or [doc]"
+OBJECTS = $(SOURCES:.cpp=.o)
+MAIN = parking
 
-install:
-	@echo "Instaling all libraries..."
-	@for lib in $(LIB_LIST) ; do \
-		ln -s  $(SOURCE_PATH)/$$lib $(ARDUINO_LIB_PATH); \
-	done
-	@echo "done."
-	
-uninstall:
-	@echo "Uninstaling all libraries..."
-	@for lib in $(LIB_LIST) ; do \
-		rm -r $(ARDUINO_LIB_PATH)/$$lib ; \
-	done
-	@echo "done."
-		
-doc:
-	@echo "Running doxygen..."
-	@rm -rf doc
-	@mkdir doc
-	doxygen doxygen.conf
-	@echo "done."
-	
-	
+.PHONY: depend clean
+
+all: $(MAIN)
+	@echo  Arduino Parking Sensor
+
+$(MAIN): $(OBJECTS) 
+	$(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJECTS) $(LFLAGS) $(LIBRARIES)
+
+.cpp.o:
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+clean:
+	find . -type f -name "*.o" -exec $(RM) {} \;
+	$(RM) $(MAIN)
+
+depend: $(SRCS)
+	makedepend $(INCLUDES) $^
+
+# DO NOT DELETE THIS LINE -- make depend needs it
