@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 ########################################################################
 
-ArduinoParkingSensor	KEYWORD1
+ArduinoCarMonitor	KEYWORD1
 
 ########################################################################
 # Methods and Functions (KEYWORD2)

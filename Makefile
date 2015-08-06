@@ -5,12 +5,12 @@ LFLAGS =
 LIBRARIES =
 
 OBJECTS = $(SOURCES:.cpp=.o)
-MAIN = parking
+MAIN = monitor
 
 .PHONY: depend clean
 
 all: $(MAIN)
-	@echo  Arduino Parking Sensor
+	@echo  Arduino Car Monitor
 
 $(MAIN): $(OBJECTS) 
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJECTS) $(LFLAGS) $(LIBRARIES)
