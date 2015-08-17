@@ -1,3 +1,3 @@
-# Arduino Car Monitor Library
+# Arduino Distance Driver
 
 [Documentation.pdf](Documentation.pdf)
