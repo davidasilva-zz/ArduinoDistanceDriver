@@ -1,16 +1,13 @@
 ########################################################################
-# Syntax Coloring Map For UltrasoundDistanceSensor
+# Syntax Coloring Map For ArduinoParkingSensor
 ########################################################################
 
 ########################################################################
 # Datatypes (KEYWORD1)
 ########################################################################
 
-UltrasoundDistanceSensor	KEYWORD1
+ArduinoCarMonitor	KEYWORD1
 
 ########################################################################
 # Methods and Functions (KEYWORD2)
 ########################################################################
-
-getDistance	KEYWORD2
-getEchoTime KEYWORD2
