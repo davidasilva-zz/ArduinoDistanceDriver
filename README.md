@@ -1,3 +1,3 @@
-# Arduino Arduino Parking Sensor Library
+# Arduino Car Monitor Library
 
 [Documentation.pdf](Documentation.pdf)
