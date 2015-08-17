@@ -9,6 +9,9 @@ MAIN = monitor
 
 .PHONY: depend clean
 
+doc:
+	
+
 all: $(MAIN)
 	@echo  Arduino Car Monitor
 
