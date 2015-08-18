@@ -11,6 +11,7 @@
 #ifndef __ARDUINO_DRIVER_ULTRASOUND_DISTANCE_SENSOR_CPP__
 #define __ARDUINO_DRIVER_ULTRASOUND_DISTANCE_SENSOR_CPP__ 1
 
+#include <Arduino.h>
 #include <UltrasoundDistanceSensor.h>
 
 UltrasoundDistanceSensor::UltrasoundDistanceSensor(unsigned char echoPin, unsigned char trigPin) : echoPin(echoPin), trigPin(trigPin) {
