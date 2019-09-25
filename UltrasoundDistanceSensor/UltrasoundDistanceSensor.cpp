@@ -14,7 +14,7 @@
 #include <Arduino.h>
 #include <UltrasoundDistanceSensor.h>
 
-#define TRIGER_DURATION 100
+#define TRIGGER_DURATION 100
 
 UltrasoundDistanceSensor::UltrasoundDistanceSensor(unsigned char echoPin, unsigned char trigPin) : echoPin(echoPin), trigPin(trigPin) {
     pinMode(echoPin, INPUT);
@@ -23,10 +23,10 @@ UltrasoundDistanceSensor::UltrasoundDistanceSensor(unsigned char echoPin, unsign
 
 unsigned long UltrasoundDistanceSensor::getEchoTime() {
     digitalWrite(trigPin, HIGH);
-    delayMicroseconds(TRIGER_DURATION);
+    delayMicroseconds(TRIGGER_DURATION);
     digitalWrite(trigPin, LOW);
     unsigned long t = pulseIn(echoPin, HIGH, US_SENSOR_PULSE_IN_TIMEOUT);
-    return t - TRIGER_DURATION;
+    return t - TRIGGER_DURATION;
 }
 
 float UltrasoundDistanceSensor::getDistance() {
